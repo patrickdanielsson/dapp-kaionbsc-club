@@ -1232,3 +1232,7 @@ textarea.error {
     padding-bottom: 88.7%;
   }
 }
+
+.logo {
+  max-height: 60px;
+}

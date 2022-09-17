@@ -117,36 +117,6 @@ const shortener = (_data, _start, _end) => {
   return result.join("");
 };
 
-//convert price to readible interger to display on page.
-
-async function weiConvert(){
-    const web3 = new Web3(provider);
-    let Contract = web3.eth.Contract;
-    let contract = new Contract(abi, contractAddress);
-    let currentPriceWei = await contract.methods.currentPrice().call();
-    console.log("Current Price Wei",currentPriceWei);
-    const etherValue = web3.utils.fromWei(currentPriceWei, 'ether');
-    console.log("ether value",etherValue);
-    document.getElementById("mintPrice").innerHTML = etherValue;
-    return currentPriceWei;
-
-
-}
-
-async function etherConvert(weidigit){
-  const web3 = new Web3(provider);
-  let Contract = web3.eth.Contract;
-  let contract = new Contract(abi, contractAddress);
-  let currentPriceWei = await contract.methods.priceTier().call();
-  console.log("Current Price Wei",currentPriceWei);
-  const etherValue = web3.utils.fromWei(weidigit, 'ether');
-  console.log("ether value",etherValue);
-  document.getElementById("mintPrice").innerHTML = etherValue;
-  return etherValue;
-
-
-}
-
 // Claim rewards
 const Claim = async () => {
   const web3 = new Web3(provider);

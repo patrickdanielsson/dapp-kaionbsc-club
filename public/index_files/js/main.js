@@ -100,7 +100,7 @@ const Balance = async (address) => {
   balance = (bal / 10 ** 18).toFixed(3);
   let Address = showAddress(address);
   connect_bt.classList.add("connect_btn");
-  connect_bt.innerHTML = `<i  class="fas fa-wallet"><br>${balance} BNB`;
+  connect_bt.innerHTML = `<i  class="fas fa-wallet"></i><br>${balance} BNB`;
 };
 
 function showAddress(num) {

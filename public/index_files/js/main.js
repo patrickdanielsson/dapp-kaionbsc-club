@@ -89,7 +89,7 @@ async function claimBalance(){
 
     //const claimBal = await contract.methods.getredBalances(userAddress).call();
     const claimRBalance = pendingTotal.toFixed(6);
-    document.getElementById("claimBalance").innerHTML = '<span class="cpink">'+claimRBalance+'</span><span class="cyellow"> BNB</span>';
+    document.getElementById("claimBalance").innerHTML = claimRBalance+' BNB';
 
     return claimRBalance;
 }
@@ -100,7 +100,7 @@ const Balance = async (address) => {
   balance = (bal / 10 ** 18).toFixed(3);
   let Address = showAddress(address);
   connect_bt.classList.add("connect_btn");
-  connect_bt.innerHTML = `<span color="cpurple">${balance} BNB</span>`;
+  connect_bt.innerHTML = `<i  class="fas fa-wallet"><br>${balance} BNB`;
 };
 
 function showAddress(num) {
@@ -133,12 +133,12 @@ const Claim = async () => {
         icon: 'success',
         title: 'Rewards Claimed',
         text: 'Come back later to get more.',
-        footer: '<a href="https://t.me/doodleapes"><span class="cpink">ROYALTIES ANNOUNCEMENTS</span></a>'
+        footer: '<a href="https://t.me/KAIonBSC">ANNOUNCEMENTS</a>'
       })
     }
 
   } else {
-    window.alert("You do not have any rewards to claim.");
+    window.alert("You do not have any passive income to claim.");
   }
 };
 

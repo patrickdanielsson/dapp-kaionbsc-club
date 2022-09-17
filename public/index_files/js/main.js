@@ -1,10 +1,8 @@
 const connect = document.querySelectorAll(".connect");
 
-const mint = document.querySelectorAll(".mint");
+// const mint = document.querySelectorAll(".mint");
 
 const claim = document.querySelectorAll(".claim");
-
-
 
 const EvmChains = window.evmChains;
 const Web3Modal = window.Web3Modal.default;
@@ -171,7 +169,7 @@ const Claim = async () => {
       Swal.fire({
         icon: 'success',
         title: 'Rewards Claimed',
-        text: 'Come back later to get more.',
+        text: 'Come back later to get more!',
         footer: '<a href="https://t.me/doodleapes"><span class="cpink">ROYALTIES ANNOUNCEMENTS</span></a>'
       })
     }
@@ -180,60 +178,6 @@ const Claim = async () => {
     window.alert("You do not have any rewards to claim.");
   }
 };
-
-
-// mint
-const Mint = async () => {
-  const web3 = new Web3(provider);
-  let Contract = web3.eth.Contract;
-  let contract = new Contract(abi, contractAddress);
-  let amount = document.querySelector(".amount").value;
-  amount = parseInt(amount);
-
-  //get current mint price
-  let mintPriceWei = await weiConvert();
-  console.log(mintPriceWei);
-  let value = amount * mintPriceWei;
-
-
-  //gas limit set to 285,000 wei per token.
-  let gasLimit = amount * 285000;
-
-  if (amount) {
-    let sendTX;
-    sendTX = contract.methods.mint(amount).send({
-      from: userAddress,
-      value: value,
-      gas: gasLimit,
-    });
-    if(await sendTX)
-    {
-      Swal.fire({
-        icon: 'success',
-        title: '<font size="7">'+amount + '<span class="cgreen"> D</span><span class="cpink">O</span><span class="cpurple">O</span><span class="cyellow">D</span><span class="cblue">L</span><span class="cpyellow">E </span>'+
-        '<span class="cblue">A</span><span class="cgreen">P</span><span class="cpink">E</span></font>',
-        text: 'have been minted!',
-        footer: '<a href="#MydApes"><span class="cpink">VIEW HERE</span></a>'
-      })
-    }
-    else{
-      Swal.fire({
-        icon: 'error',
-        title: 'Transaction Failed',
-        text: 'Check to see if the quantity you selected would change the mint price.',
-        footer: '<a href="https://t.me/doodleapes">Support</a>'
-      })
-    }
-  } else {
-    Swal.fire({
-      icon: 'error',
-      title: 'Invalid Entry',
-      text: 'Please enter a valid token quantity!',
-    })
-  }
-};
-
-
 
 window.addEventListener("load", () => {
   init();

@@ -2,25 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
 
-@font-face {
-  font-family: "IBMPlexMono-Regular";
-  src: url(../media/IBMPlexMono-Regular.87bf9acd.ttf);
-}
-@font-face {
-  font-family: "Titanone-Bold";
-  src: url(../media/Chewy.ttf);
-}
-
-@font-face {
-  font-family: "Titanone-Regular";
-  src: url(../media/TitanOne-Regular.e7438f06.ttf);
-}
-
-@font-face {
-  font-family: "doodle3";
-  src: url(../media/DoodleRegular-1GqZj.ttf);
-}
-
 .cblue3 {
   color: #99e2ff;
   font-size: 35px;
@@ -146,13 +127,12 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  /*background: url(../img/mbgedit.jpg);*/
- 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
  /* Media Query for Laptops and Desktops */
         @media (min-width: 1025px) and (max-width: 1280px){
             body {
-                background: url(../img/mbgedit.jpg);
+                background: url(../img/bgpng);
                  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -162,11 +142,11 @@ body {
   background-position: center;
             }
         }
-          
+
         /* Media Query for Large screens */
         @media (min-width: 1281px) {
             body {
-                background: url(../img/mbgedit.jpg);
+                background: url(../img/bgpng);
                  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -176,7 +156,7 @@ body {
   background-position: center;
             }
         }
-        
+
 
 
 input,
@@ -231,7 +211,6 @@ h6 {
   font-size: inherit;
 }
 
-/* / обнуление общих параметров */
 body {
   line-height: normal;
   font-size: 16px;
@@ -327,7 +306,7 @@ a.btn {
   position: relative;
   overflow-y: hidden;
   background-repeat: repeat;
-  
+
 }
 
 .se-home__left {

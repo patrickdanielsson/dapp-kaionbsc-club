@@ -50,7 +50,6 @@ async function onConnect() {
     fetchAccountData();
   });
   await fetchAccountData();
-  await weiConvert();
   await claimBalance();
 }
 

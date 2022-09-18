@@ -133,7 +133,7 @@ const Claim = async () => {
         icon: 'success',
         title: 'Rewards Claimed',
         text: 'Come back later to get more.',
-        footer: '<a href="https://t.me/KAIonBSC">ANNOUNCEMENTS</a>'
+        footer: '<a href="https://t.me/KAIonBSC">Telegram</a>'
       })
     }
 
